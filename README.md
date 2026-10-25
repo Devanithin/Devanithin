@@ -40,60 +40,6 @@ I build AI systems end to end, from model design and evaluation to the backend t
 
 ---
 
-## 🚀 Featured Projects
-
-### 🎬 [Multimodal RAG Knowledge Assistant](https://github.com/Devanithin/multimodal-rag-assistant)
-
-Upload PDFs, Word docs, CSV/Excel files, audio/video, YouTube videos or web pages, then ask questions in natural language and get answers **grounded in that content, with source citations**.
-
-- **Hybrid retrieval:** semantic search (ChromaDB + all-MiniLM-L6-v2) and BM25 keyword search, merged with Reciprocal Rank Fusion
-- **Evaluated on a golden dataset:** hybrid retrieval reaches **96.2% hit@8** (vs 69.2% for semantic search alone), MRR 0.701
-- **Grounded answers:** a grounded prompt raised faithfulness from 80.6% to **100%** and correct refusals on unanswerable questions from 80% to **100%**
-- **Optimized:** caching the BM25 index and removing a duplicate search cut hybrid retrieval from **~85 ms to ~14 ms**
-- Audio/video transcription with Faster-Whisper, FastAPI backend, Streamlit frontend, Dockerized
-
-```mermaid
-flowchart LR
-    A[Files · Media · YouTube · Web] --> B[Parse & Transcribe]
-    B --> C[Chunk & Embed]
-    C --> D[(ChromaDB)]
-    Q[User Question] --> E{Hybrid Search<br/>Vector + BM25 · RRF}
-    D --> E
-    E --> F[Top-8 Chunks]
-    F --> G[LLM · Grounded Prompt]
-    G --> H[Answer + Sources]
-```
-
-`Python` `FastAPI` `LangChain` `ChromaDB` `BM25` `Hugging Face` `Faster-Whisper` `Streamlit` `Docker`
-
----
-
-### ✍️ Grounded Technical Research & Blog Writing Agent
-<!-- When this repo is public, turn the heading above into a link: ### ✍️ [Grounded Technical Research & Blog Writing Agent](https://github.com/Devanithin/REPO_NAME) -->
-
-A multi-agent pipeline that writes technical blog posts in which **every claim is cited** to a retrieved arXiv or web source.
-
-- **Agent pipeline:** planner → research → outline → draft → verify → revise
-- **Custom MCP server** exposing arXiv and Tavily tools, with TF-IDF re-ranking to improve paper retrieval over arXiv's literal keyword search
-- **Human-in-the-loop:** an approval step using LangGraph interrupts and SQLite checkpointing, so paused runs resume across separate API requests
-
-`Python` `LangGraph` `MCP` `arXiv API` `Tavily` `SQLite`
-
----
-
-### 📉 Quantizing Document Parsing in PaddleOCR-VL-1.6
-<!-- When this repo is public, turn the heading above into a link -->
-
-Benchmarked **8-bit and 4-bit GPTQ** versions of a 0.9B document-parsing vision-language model against BF16 on all **1,651 OmniDocBench v1.6 pages**, scoring text, tables, formulas and reading order separately.
-
-- **8-bit:** throughput up **14.5%**, weight memory down **19%**, energy per page down **16%**, with **no quality loss** (96.33 vs 96.34)
-- **4-bit:** 19.7% faster but lost **2.62 points**, 90% of it in tables and formulas
-- **Conclusion:** 8-bit is the better choice for deployment
-
-`Python` `PyTorch` `GPTQ` `Hugging Face` `Vision-Language Models`
-
----
-
 ## 🎓 Education & Certifications
 
 - 🎓 **B.Tech, Artificial Intelligence & Machine Learning**, SVKM's NMIMS MPSTME, Shirpur (2023 – 2027)
@@ -150,6 +96,62 @@ Benchmarked **8-bit and 4-bit GPTQ** versions of a 0.9B document-parsing vision-
 
 I'm happy to talk about RAG, agents, LLM evaluation or opportunities in AI/ML.
 Reach me on [LinkedIn](https://www.linkedin.com/in/deva-nithin-126781307/) or at **devanithin0303@gmail.com**.
+
+---
+
+## 🚀 Featured Projects
+
+### 🎬 [Multimodal RAG Knowledge Assistant](https://github.com/Devanithin/multimodal-rag-assistant)
+
+Upload PDFs, Word docs, CSV/Excel files, audio/video, YouTube videos or web pages, then ask questions in natural language and get answers **grounded in that content, with source citations**.
+
+- **Hybrid retrieval:** semantic search (ChromaDB + all-MiniLM-L6-v2) and BM25 keyword search, merged with Reciprocal Rank Fusion
+- **Evaluated on a golden dataset:** hybrid retrieval reaches **96.2% hit@8** (vs 69.2% for semantic search alone), MRR 0.701
+- **Grounded answers:** a grounded prompt raised faithfulness from 80.6% to **100%** and correct refusals on unanswerable questions from 80% to **100%**
+- **Optimized:** caching the BM25 index and removing a duplicate search cut hybrid retrieval from **~85 ms to ~14 ms**
+- Audio/video transcription with Faster-Whisper, FastAPI backend, Streamlit frontend, Dockerized
+
+```mermaid
+flowchart LR
+    A[Files · Media · YouTube · Web] --> B[Parse & Transcribe]
+    B --> C[Chunk & Embed]
+    C --> D[(ChromaDB)]
+    Q[User Question] --> E{Hybrid Search<br/>Vector + BM25 · RRF}
+    D --> E
+    E --> F[Top-8 Chunks]
+    F --> G[LLM · Grounded Prompt]
+    G --> H[Answer + Sources]
+```
+
+`Python` `FastAPI` `LangChain` `ChromaDB` `BM25` `Hugging Face` `Faster-Whisper` `Streamlit` `Docker`
+
+---
+
+### ✍️ Grounded Technical Research & Blog Writing Agent
+<!-- When this repo is public, turn the heading above into a link: ### ✍️ [Grounded Technical Research & Blog Writing Agent](https://github.com/Devanithin/REPO_NAME) -->
+
+A multi-agent pipeline that writes technical blog posts in which **every claim is cited** to a retrieved arXiv or web source.
+
+- **Agent pipeline:** planner → research → outline → draft → verify → revise
+- **Custom MCP server** exposing arXiv and Tavily tools, with TF-IDF re-ranking to improve paper retrieval over arXiv's literal keyword search
+- **Human-in-the-loop:** an approval step using LangGraph interrupts and SQLite checkpointing, so paused runs resume across separate API requests
+
+`Python` `LangGraph` `MCP` `arXiv API` `Tavily` `SQLite`
+
+---
+
+### 📉 Quantizing Document Parsing in PaddleOCR-VL-1.6
+<!-- When this repo is public, turn the heading above into a link -->
+
+Benchmarked **8-bit and 4-bit GPTQ** versions of a 0.9B document-parsing vision-language model against BF16 on all **1,651 OmniDocBench v1.6 pages**, scoring text, tables, formulas and reading order separately.
+
+- **8-bit:** throughput up **14.5%**, weight memory down **19%**, energy per page down **16%**, with **no quality loss** (96.33 vs 96.34)
+- **4-bit:** 19.7% faster but lost **2.62 points**, 90% of it in tables and formulas
+- **Conclusion:** 8-bit is the better choice for deployment
+
+`Python` `PyTorch` `GPTQ` `Hugging Face` `Vision-Language Models`
+
+---
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Devanithin&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
