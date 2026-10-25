@@ -17,13 +17,13 @@
 ## 🧠 About Me
 
 I'm a final-year **B.Tech student in Artificial Intelligence & Machine Learning** at **SVKM's NMIMS MPSTME, Shirpur** (graduating 2027).
-I build AI systems end to end, from model design and evaluation to the backend that serves them.
+I enjoy working with data and building AI systems end to end, from analysis and model design to the backend that serves them.
 
-- 🔍 Building **retrieval-augmented generation (RAG)** systems with hybrid search and grounded, source-cited answers
-- 🤖 Designing **agentic workflows** with LangGraph, custom MCP tools and human-in-the-loop approval
-- ⚡ Benchmarking **model quantization (GPTQ)** for efficient deployment of vision-language models
-- 📏 Measuring what I build with golden datasets, retrieval metrics (hit@k, MRR) and faithfulness checks
-- 🎯 Open to **ML Engineer, GenAI Developer and AI Engineer** roles
+- 💡 **Interests:** Generative AI, LLM applications, data science, information retrieval and deep learning
+- 🧪 **How I work:** I measure before I decide, comparing approaches with evaluation sets and benchmarks
+- 🎯 **Looking for:** ML Engineer, Data Scientist, GenAI Developer and AI Engineer roles
+- 📍 **Based in:** India
+<!-- Optional: add a line like  - 🌱 **Currently learning:** ...  when you start something new -->
 
 ---
 
